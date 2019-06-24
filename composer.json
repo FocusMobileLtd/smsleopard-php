@@ -1,0 +1,24 @@
+{
+    "name": "smsleopard/smsleopard",
+    "description": "SMS api client for SMSLeopard.",
+    "keywords": ["sms", "bulk sms", "smsleopard", "api"],
+    "type": "library",
+    "authors": [
+        {
+            "name": "SMSLeopard",
+            "email": "info@smsleopard.com",
+            "homepage": "https://www.smsleopard.com/"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^8.2",
+        "rmccue/requests": "^1.7",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "SMSLeopard\\":"src/",
+            "SMSLeopard\\Tests\\":"tests"
+        }
+    }
+}
