@@ -4,9 +4,15 @@ namespace SMSLeopard;
 
 use GuzzleHttp\Client AS fetch;
 
-class Client
+interface iClient 
 {
-  function __construct($account_id, $account_secret)
+  public function __construct($account_id, $account_secret);
+  public function send($sender_id, $message, $recipients, $send_multi = false, $status_url = '', $status_secret='');
+}
+
+class Client implements iClient
+{
+  public function __construct($account_id, $account_secret)
   {
     $this->api = 'https://api.smsleopard.com/v1/sms/send';
     $this->auth = base64_encode($account_id.':'.$account_secret);
