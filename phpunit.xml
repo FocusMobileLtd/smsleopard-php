@@ -8,4 +8,8 @@
       <directory>tests</directory>
     </testsuite>
   </testsuites>
+  <php>
+    <env name="ACCOUNT_ID" value="" />
+    <env name="ACCOUNT_SECRET" value="" />
+  </php>
 </phpunit>
