@@ -16,7 +16,7 @@ class ClientTest extends TestCase
 
   public function testSendNormalMessage(){
     $message = 'Test message';
-    $sender_id = 'smsleopard';
+    $sender_id = 'SMS_TEST';
     $recipients = [['number'=> '+254796316496']];
     $this->assertArraySubset(
       ['success' => true],
@@ -26,7 +26,7 @@ class ClientTest extends TestCase
 
   public function testSendCustomizedMessage(){
     $message = 'Hello {name}';
-    $sender_id = 'smsleopard';
+    $sender_id = 'SMS_TEST';
     $recipients = [
       ['number' => '+254718876044', 'message' => 'Hello Brian'],
       ['number' => '+254787050584', 'message' => 'Hello Joan']
