@@ -22,7 +22,10 @@ class Client implements iClient
   {
     $client = new fetch();
     $res = $client->post($this->api,$data);
-    return json_decode($res->getBody(), true);
+    $status= $res->getStatusCode();
+    $res_json = json_decode($res->getBody(), true);
+    $res_json['status'] = $status;
+    return $res_json;
   }
 
   private function getData($payload)

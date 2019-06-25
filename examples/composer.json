@@ -1,0 +1,5 @@
+{
+    "require": {
+        "smsleopard/smsleopard": "^0.1.1"
+    }
+}
